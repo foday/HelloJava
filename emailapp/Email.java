@@ -1,4 +1,5 @@
 package emailapp;
+import java.util.Scanner;
 
 public class Email { 
     private String firstName;
@@ -12,11 +13,23 @@ public class Email {
     public Email(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
-        System.out.println("Email Created...." + "First Name: " + this.firstName + 
-        " | Last Name: " + this.lastName);
+        System.out.println("Email Created:\n" + "First Name: " + this.firstName + 
+        "\nLast Name: " + this.lastName);
+
+        // Call a method asking for the department - return the department
+        this.department = setDepartment();
     }
 
     //Ask for the department
+    private String setDepartment() {
+        System.out.print("Enter the deparment\n1 for Sales\n2 for Development\n3 for Accounting\n0 for none");
+        Scanner in = new Scanner(System.in);
+        int depChoice = in.nextInt();
+        if (depChoice == 1) { return "sales"; }
+        else if (depChoice == 2) { return "dev"; }
+        else if (depChoice == 3) { return "acct"; }
+        else { return "";}
+    }
 
     //Generate a random password
 
