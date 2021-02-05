@@ -18,11 +18,14 @@ public class Email {
 
         // Call a method asking for the department - return the department
         this.department = setDepartment();
+        System.out.println("Department: " + this.department);
+
+        // Call a method that returns a random password 
     }
 
     //Ask for the department
     private String setDepartment() {
-        System.out.print("Enter the deparment\n1 for Sales\n2 for Development\n3 for Accounting\n0 for none");
+        System.out.print("Enter the department code\n1 for Sales\n2 for Development\n3 for Accounting\n0 for none \n");
         Scanner in = new Scanner(System.in);
         int depChoice = in.nextInt();
         if (depChoice == 1) { return "sales"; }
