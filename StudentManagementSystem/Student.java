@@ -8,7 +8,8 @@ public class Student {
     private int StudentID;
     private String courses;
     private int tutionBalance;
-    private int costOFCourse = 600;
+    private int costOfCourse = 600;
+    private static int id = 1001;
     
     // Constructors - prompts students to enter name and year 
     public Student() {
