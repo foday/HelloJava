@@ -9,7 +9,11 @@ public class TestConnection {
         try {
             Class.forName("org.postgresql.Driver");
 
-            String url = :jdbc:postgresSWl://
+            String url = "jdbc:postgresSWl://localhost:5432/PubHub";
+            String user = "postgres";
+            String pass = "password";
+
+            Connection conn = DriverManager.getConnection(url, user, password);
         }
     }
     
