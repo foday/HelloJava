@@ -2,6 +2,7 @@
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 import oracle.jdbc.OracleDriver;
 
@@ -23,6 +24,8 @@ public class StatementTest {
             stmt1.executeUpdate();
 
             conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 }
