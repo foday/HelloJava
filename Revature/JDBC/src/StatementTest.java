@@ -1,5 +1,8 @@
 //import oracle.sql.DriverManager;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
 import oracle.jdbc.OracleDriver;
 
 public class StatementTest {
@@ -14,7 +17,12 @@ public class StatementTest {
             Connection conn = DriveManager.getConnection(url, user, pass);
 
             PreparedStatement stmt1 = conn.prepareStatement("insert into STUDENTS values(?, ?)");
+            stmt1.setInt(1, 1);
+            stmt1.setString(2, "James Basketville");
 
+            stmt1.executeUpdate();
+
+            conn.close();
         }
     }
 }
