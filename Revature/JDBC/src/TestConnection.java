@@ -20,6 +20,8 @@ public class TestConnection {
             System.out.println(meta.getDatabaseProductName());
 
             conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
     
